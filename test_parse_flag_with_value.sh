@@ -1,4 +1,4 @@
-#!/usr/bin/env 11;rgb:1d2d/36b0/455bbash
+#!/usr/bin/env bash
 #
 # Dummy command to test parsing command line "flags: (-h, -p)" and "values: (project)".
 #

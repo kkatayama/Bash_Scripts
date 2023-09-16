@@ -1,23 +1,27 @@
 #!/usr/bin/env bash
 
 # Test that "3 + 4 + 3 == 10"
-echo "3 + 4 + 3 = ?"
-echo 3+4 | bc | xargs -I {} sh -c 'echo {}+3' | bc
 echo ""
+echo "EQ = \"3 + 4 + 3\" = ?"
 
+EQ="3 + 4 + 3"
+echo "EQ = \"${EQ}\" = $(expr $EQ)"
+echo ""
 ### OUTPUTS ###
-# 3 + 4 + 3 = ?
-# 10
+# EQ = "3 + 4 + 3" = ?
+# EQ = "3 + 4 + 3" = 10
+
 
 # Test that "2 + 4 == 6" but this time using variables
 NUM="2"
-SUM=$((NUM+4))
+SUM=$(expr $NUM + 4)
 
 echo "NUM = 2"
 echo "NUM + 4 = ?"
-echo "${SUM}"
+echo "NUM + 4 = ${SUM}"
+echo ""
 
 ### OUTPUTS ###
 # NUM = 2
 # NUM + 4 = ?
-# 6
+# NUM + 4 = 6
