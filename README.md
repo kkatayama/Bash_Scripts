@@ -1,6 +1,6 @@
 # Bash Scripts
 
-## [test_if_varibale_contains_a_value.sh](#test_if_varibale_contains_a_value.sh)
+## [test_if_varibale_contains_a_value.sh](/test_if_varibale_contains_a_value.sh)
 
 ```bash
 #!/usr/bin/env bash
@@ -40,7 +40,7 @@ fi
 
 ```
 
-## [Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh](#Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh)
+## [Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh](/Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh)
 
 ```bash
 #!/usr/bin/env bash
@@ -84,7 +84,7 @@ done;
 
 ```
 
-## [test_parse_flag_with_value.sh](#test_parse_flag_with_value.sh)
+## [test_parse_flag_with_value.sh](/test_parse_flag_with_value.sh)
 
 ```bash
 #!/usr/bin/env bash
@@ -158,7 +158,7 @@ END
 
 ```
 
-## [How_to_Comment_Multiple_lines.sh](#How_to_Comment_Multiple_lines.sh)
+## [How_to_Comment_Multiple_lines.sh](/How_to_Comment_Multiple_lines.sh)
 
 ```bash
 #!/usr/bin/env bash
@@ -175,7 +175,7 @@ END
 
 ```
 
-## [How_to_Add_Numbers.sh](#How_to_Add_Numbers.sh)
+## [How_to_Add_Numbers.sh](/How_to_Add_Numbers.sh)
 
 ```bash
 #!/usr/bin/env bash
@@ -204,7 +204,7 @@ echo "${SUM}"
 
 ```
 
-## [Test_Printing_Colors.zsh](#Test_Printing_Colors.zsh)
+## [Test_Printing_Colors.zsh](/Test_Printing_Colors.zsh)
 
 ```bash
 #!/usr/bin/env zsh
