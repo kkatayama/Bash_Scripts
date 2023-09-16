@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # Test that "3 + 4 + 3 == 10"
 echo "3 + 4 + 3 = ?"

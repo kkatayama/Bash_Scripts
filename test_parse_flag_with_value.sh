@@ -1,28 +1,35 @@
-#!/usr/local/bin/zsh
+#!/usr/bin/env bash
 #
 # Dummy command to test parsing command line "flags: (-h, -p)" and "values: (project)".
 #
 
-PROJECT=unknown
+PROJECT=false
 
-USAGE_MESSAGE="
-Usage: $0 [-h] [-p project]
- -h help
- -p {project name}"
+function usage() {
+    echo "Usage: $0 [-h] [-p project]"
+    echo " -h help"
+    echo " -p {project name}"
+}
 
 while getopts hp: args
 do case "$args" in
-       p) PROJECT="$OPTARG";;
-       h) echo "${USAGE_MESSAGE}"
+       (p)
+          PROJECT="$OPTARG";;
+       (h)
+          usage
           exit 1;;
-       :) echo "${USAGE_MESSAGE}"
-          exit 1;;
-       *) echo "${USAGE_MESSAGE}"
+       (*)
+          usage
           exit 1;;
    esac
 done
 
-shift $(($OPTIND - 1))
+# shift $(($OPTIND - 1))
+
+if [[ $PROJECT == false ]]; then
+    usage
+    exit 1;
+fi
 
 PROJECT_HOME=${HOME}/Documents/${PROJECT}
 echo ""
@@ -32,7 +39,7 @@ echo "Launching project '${PROJECT}' from: \"${PROJECT_HOME}\""
 ###############################################################################
 #                               Sample Test Runs                              #
 ###############################################################################
-: <<EOF'END'
+: <<'END'
 
 
 ### COMMAND ###
@@ -58,4 +65,4 @@ Launching project 'Test Project' from: "/Users/katayama/Documents/Test Project"
 
 
 
-EOF
+END

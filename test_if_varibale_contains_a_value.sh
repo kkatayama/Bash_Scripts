@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 VARIABLE_WITH_STUFF="Things about stuff!"
 
@@ -10,9 +10,9 @@ VARIABLE_WITOUT_STUFF=""
 ###############################################################################
 if [[ (( $VARIABLE_WITH_STUFF)) ]]
 then
-    print "this variable contains stuff: \$VARIABLE_WITH_STUFF: \"${VARIABLE_WITH_STUFF}\""
+    echo "this variable contains stuff: \$VARIABLE_WITH_STUFF: \"${VARIABLE_WITH_STUFF}\""
 else
-    print "this variable is empty: \$VARIABLE_WITH_STUFF: \"${VARIABLE_WITH_STUFF}\""
+    echo "this variable is empty: \$VARIABLE_WITH_STUFF: \"${VARIABLE_WITH_STUFF}\""
 fi
 
 ###############################################################################
@@ -20,9 +20,9 @@ fi
 ###############################################################################
 if [[ (( $VARIABLE_WITOUT_STUFF)) ]]
 then
-    print "this variable contains stuff: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
+    echo "this variable contains stuff: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
 else
-    print "this variable is empty: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
+    echo "this variable is empty: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
 fi
 
 
