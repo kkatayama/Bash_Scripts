@@ -29,15 +29,17 @@ then
 else
     echo "this variable is empty: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
 fi
+```
 
+**Test Run:**
+```yaml
+./test_if_varibale_contains_a_value.zsh
+```
 
-### COMMAND ###
-# ./test_if_varibale_contains_a_value.zsh
-
-### OUTPUTS ###
-# this variable contains stuff: $VARIABLE_WITH_STUFF: "Things about stuff!"
-# this variable is empty: $VARIABLE_WITHOUT_STUFF: ""
-
+**Outputs:**
+```bash
+this variable contains stuff: $VARIABLE_WITH_STUFF: "Things about stuff!"
+this variable is empty: $VARIABLE_WITHOUT_STUFF: ""
 ```
 
 ## [Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh](/Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh)
@@ -80,8 +82,6 @@ for i in {01..12} 20; do
         filenames rename "$SRC/Chapter $i" "Pr$p-$j.cpp" "Pr$p-0$j.cpp" #--preview;
     done;
 done;
-
-
 ```
 
 ## [test_parse_flag_with_value.sh](/test_parse_flag_with_value.sh)
@@ -113,8 +113,6 @@ do case "$args" in
    esac
 done
 
-# shift $(($OPTIND - 1))
-
 if [[ $PROJECT == false ]]; then
     usage
     exit 1;
@@ -123,39 +121,53 @@ fi
 PROJECT_HOME=${HOME}/Documents/${PROJECT}
 echo ""
 echo "Launching project '${PROJECT}' from: \"${PROJECT_HOME}\""
+```
 
+**Test Run:**
+```yaml
+./test_parse_flag_with_value.zsh
+```
 
-###############################################################################
-#                               Sample Test Runs                              #
-###############################################################################
-: <<'END'
-
-
-### COMMAND ###
-
-./test_parse_flag_with_value.zsh -h
-
-### OUTPUTS ###
-
+**Outputs:**
+```bash
 Usage: ./test_parse_flag_with_value.zsh [-h] [-p project]
  -h help
  -p {project name}
+```
 
+**Test Run:**
+```yaml
+./test_parse_flag_with_value.zsh -h
+```
 
+**Outputs:**
+```bash
+Usage: ./test_parse_flag_with_value.zsh [-h] [-p project]
+ -h help
+ -p {project name}
+```
 
-### COMMAND ###
+**Test Run:**
+```yaml
+./test_parse_flag_with_value.zsh -p
+```
 
- ./test_parse_flag_with_value.zsh -p "Test Project"
+**Outputs:**
+```bash
+./test_parse_flag_with_value.sh: option requires an argument -- p
+Usage: ./test_parse_flag_with_value.sh [-h] [-p project]
+ -h help
+ -p {project name}
+```
 
-### OUTPUTS ###
+**Test Run:**
+```yaml
+./test_parse_flag_with_value.zsh -p "Test Project"
+```
 
+**Outputs:**
+```bash
 Launching project 'Test Project' from: "/Users/katayama/Documents/Test Project"
-
-
-
-
-END
-
 ```
 
 ## [How_to_Comment_Multiple_lines.sh](/How_to_Comment_Multiple_lines.sh)
@@ -172,7 +184,6 @@ Everything between the top and bottm "END" lines are commented out.
 
 
 END
-
 ```
 
 ## [How_to_Add_Numbers.sh](/How_to_Add_Numbers.sh)
@@ -181,27 +192,29 @@ END
 #!/usr/bin/env bash
 
 # Test that "3 + 4 + 3 == 10"
-echo "3 + 4 + 3 = ?"
-echo 3+4 | bc | xargs -I {} sh -c 'echo {}+3' | bc
 echo ""
+echo "EQ = \"3 + 4 + 3\" = ?"
 
+EQ="3 + 4 + 3"
+echo "EQ = \"${EQ}\" = $(expr $EQ)"
+echo ""
 ### OUTPUTS ###
-# 3 + 4 + 3 = ?
-# 10
+# EQ = "3 + 4 + 3" = ?
+# EQ = "3 + 4 + 3" = 10
 
 # Test that "2 + 4 == 6" but this time using variables
 NUM="2"
-SUM=$((NUM+4))
+SUM=$(expr $NUM + 4)
 
 echo "NUM = 2"
 echo "NUM + 4 = ?"
-echo "${SUM}"
+echo "NUM + 4 = ${SUM}"
+echo ""
 
 ### OUTPUTS ###
 # NUM = 2
 # NUM + 4 = ?
-# 6
-
+# NUM + 4 = 6
 ```
 
 ## [Test_Printing_Colors.zsh](/Test_Printing_Colors.zsh)
@@ -213,6 +226,13 @@ echo "${SUM}"
 for color in {black,red,green,yellow,blue,magenta,cyan,white}; do
     print -P "| %F{$color}${(l:10:)color}%f ${(l:5:)} | ${(l:5:)}bold-%B%F{$color}${color}%f%b"
 done;
-
 ```
+
+**Test Run:*
+```yaml
+./Test_Printing_Colors.zsh
+```
+
+**Outputs:**
+![colors.png](colors.png)
 
