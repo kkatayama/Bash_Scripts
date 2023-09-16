@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env 11;rgb:1d2d/36b0/455bbash
 #
 # Dummy command to test parsing command line "flags: (-h, -p)" and "values: (project)".
 #
@@ -23,8 +23,6 @@ do case "$args" in
           exit 1;;
    esac
 done
-
-# shift $(($OPTIND - 1))
 
 if [[ $PROJECT == false ]]; then
     usage
