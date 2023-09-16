@@ -42,7 +42,7 @@ this variable contains stuff: $VARIABLE_WITH_STUFF: "Things about stuff!"
 this variable is empty: $VARIABLE_WITHOUT_STUFF: ""
 ```
 
-
+<br /><br />
 
 ## [Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh](/Nested_For_Loops_Rename_Multiple_Files_in_Multiple_Directories.sh)
 
@@ -86,7 +86,7 @@ for i in {01..12} 20; do
 done;
 ```
 
-
+<br /><br />
 
 ## [test_parse_flag_with_value.sh](/test_parse_flag_with_value.sh)
 
@@ -174,7 +174,7 @@ Usage: ./test_parse_flag_with_value.sh [-h] [-p project]
 Launching project 'Test Project' from: "/Users/katayama/Documents/Test Project"
 ```
 
-
+<br /><br />
 
 ## [How_to_Comment_Multiple_lines.sh](/How_to_Comment_Multiple_lines.sh)
 
@@ -192,7 +192,7 @@ Everything between the top and bottm "END" lines are commented out.
 END
 ```
 
-
+<br /><br />
 
 ## [How_to_Add_Numbers.sh](/How_to_Add_Numbers.sh)
 
@@ -225,7 +225,7 @@ echo ""
 # NUM + 4 = 6
 ```
 
-
+<br /><br />
 
 ## [Test_Printing_Colors.zsh](/Test_Printing_Colors.zsh)
 
@@ -244,5 +244,6 @@ done;
 ```
 
 **Outputs:**
+
 ![colors.png](colors.png)
 
