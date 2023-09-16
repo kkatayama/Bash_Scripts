@@ -8,7 +8,7 @@ VARIABLE_WITOUT_STUFF=""
 ###############################################################################
 #     This should print "variable contains stuff" for $VARIABLE_WITH_STUFF    #
 ###############################################################################
-if [[ (( $VARIABLE_WITH_STUFF)) ]]
+if [[ (( $VARIABLE_WITH_STUFF )) ]]
 then
     echo "this variable contains stuff: \$VARIABLE_WITH_STUFF: \"${VARIABLE_WITH_STUFF}\""
 else
@@ -18,7 +18,7 @@ fi
 ###############################################################################
 #     This should print "variable is empty" for $VARIABLE_WITHOUT_STUFF    #
 ###############################################################################
-if [[ (( $VARIABLE_WITOUT_STUFF)) ]]
+if [[ (( $VARIABLE_WITOUT_STUFF )) ]]
 then
     echo "this variable contains stuff: \$VARIABLE_WITHOUT_STUFF: \"${VARIABLE_WITHOUT_STUFF}\""
 else
